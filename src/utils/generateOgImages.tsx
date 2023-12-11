@@ -1,34 +1,21 @@
 import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { type CollectionEntry } from "astro:content";
-// I don't know if there is any safe place that I can just download ttf for Thai fonts.
-// It is on build time. It probably has `node` builtin.
-import fs from "node:fs/promises";
 import postOgImage from "./og-templates/post";
 import siteOgImage from "./og-templates/site";
 
 const fetchFonts = async () => {
   // Regular Font
-  const fontRegularUrl = new URL(
-    "../assets/fonts/IBMPlexSansThai-Regular.ttf",
-    import.meta.url
+  const fontFileRegular = await fetch(
+    "https://fonts.bunny.net/ibm-plex-sans-thai/files/ibm-plex-sans-thai-thai-400-normal.woff"
   );
-  const fontRegular = await fs.readFile(fontRegularUrl);
-  // const fontFileRegular = await fetch(
-  //   "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
-  // );
-  // const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
+  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
-  const fontBoldUrl = new URL(
-    "../assets/fonts/IBMPlexSansThai-Bold.ttf",
-    import.meta.url
+  const fontFileBold = await fetch(
+    "https://fonts.bunny.net/ibm-plex-sans-thai/files/ibm-plex-sans-thai-thai-700-normal.woff"
   );
-  const fontBold = await fs.readFile(fontBoldUrl);
-  // const fontFileBold = await fetch(
-  //   "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
-  // );
-  // const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
+  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
   return { fontRegular, fontBold };
 };
