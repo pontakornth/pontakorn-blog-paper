@@ -1,34 +1,35 @@
 import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { type CollectionEntry } from "astro:content";
-// I don't know if there is any safe place that I can just download ttf for Thai fonts.
-// It is on build time. It probably has `node` builtin.
-import fs from "node:fs/promises";
 import postOgImage from "./og-templates/post";
 import siteOgImage from "./og-templates/site";
 
 const fetchFonts = async () => {
+  // For some reason, it cannot get import.meta.url in the build time
+  // I ran out of idea for now.
+  // I don't know if there is any safe place that I can just download ttf for Thai fonts, so I just use GitHub as temporary CDN
+
   // Regular Font
-  const fontRegularUrl = new URL(
-    "../assets/fonts/IBMPlexSansThai-Regular.ttf",
-    import.meta.url
-  );
-  const fontRegular = await fs.readFile(fontRegularUrl);
-  // const fontFileRegular = await fetch(
-  //   "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
+  // const fontRegularUrl = new URL(
+  //   "../assets/fonts/IBMPlexSansThai-Regular.ttf",
+  //   import.meta.url
   // );
-  // const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
+  // const fontRegular = await fs.readFile(fontRegularUrl);
+  const fontFileRegular = await fetch(
+    "https://cdn.jsdelivr.net/gh/pontakornth/pontakorn-blog-paper/src/assets/fonts/IBMPlexSansThai-Regular.ttf"
+  );
+  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
-  const fontBoldUrl = new URL(
-    "../assets/fonts/IBMPlexSansThai-Bold.ttf",
-    import.meta.url
-  );
-  const fontBold = await fs.readFile(fontBoldUrl);
-  // const fontFileBold = await fetch(
-  //   "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
+  // const fontBoldUrl = new URL(
+  //   "../assets/fonts/IBMPlexSansThai-Bold.ttf",
+  //   import.meta.url
   // );
-  // const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
+  // const fontBold = await fs.readFile(fontBoldUrl);
+  const fontFileBold = await fetch(
+    "https://cdn.jsdelivr.net/gh/pontakornth/pontakorn-blog-paper/src/assets/fonts/IBMPlexSansThai-Bold.ttf"
+  );
+  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
   return { fontRegular, fontBold };
 };
