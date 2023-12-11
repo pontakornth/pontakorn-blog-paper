@@ -22,13 +22,47 @@ const { centered = false } = Astro.props;
       </LinkButton>
     ))
   }
+  <LinkButton href="https://webring.wonderful.software#pontakorn.dev"
+  className="link-button" title="Webring">
+    <img
+    alt="วงแหวนเว็บ"
+    width="32"
+    height="32"
+    src="https://webring.wonderful.software/webring.black.svg"
+    class="light-webring"
+    />
+    <img
+    alt="วงแหวนเว็บ"
+    width="32"
+    height="32"
+    src="https://webring.wonderful.software/webring.white.svg"
+    class="dark-webring"
+    />
+</LinkButton>
 </div>
 
 <style>
   .social-icons {
-    @apply flex-wrap justify-center gap-1;
+    @apply flex flex-wrap justify-center gap-1 items-center;
   }
   .link-button {
     @apply p-2 hover:rotate-6 sm:p-1;
   }
+
+  html[data-theme="dark"] .dark-webring {
+    @apply block;
+  }
+
+  html[data-theme="dark"] .light-webring {
+    @apply hidden;
+  }
+
+  html[data-theme="light"] .dark-webring {
+    @apply hidden;
+  }
+
+  html[data-theme="light"] .light-webring {
+    @apply block;
+  }
+
 </style>
