@@ -18,11 +18,22 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc,
+      [
+        remarkToc,
+        {
+          heading: "(table[ -]of[ -])?contents?|toc|สารบัญ",
+        },
+      ],
       [
         remarkCollapse,
         {
-          test: "Table of contents",
+          test: /(table[ -]of[ -])?contents?|toc|สารบัญ/,
+          summary: function (str: string) {
+            if (/[ก-ฮ]+/.test(str)) {
+              return `เปิด${str}`;
+            }
+            return `Open ${str}`;
+          },
         },
       ],
     ],
