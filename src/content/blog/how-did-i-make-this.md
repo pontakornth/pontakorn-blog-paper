@@ -3,6 +3,7 @@ title: ผมทำเว็บนี้ยังไง
 description: "ใช้ Astro กับ theme ที่ได้มาครับ"
 postSlug: how-did-i-make-this
 ogImage: "@assets/images/AstroPaper-v3.png"
+featured: true
 pubDatetime: 2023-12-12T04:05:50.281Z
 tags:
   - astro
