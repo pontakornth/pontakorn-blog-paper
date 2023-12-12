@@ -2,6 +2,7 @@
 title: ผมเบื่อ frontend แล้ว
 description: ผมไม่ได้รู้สึกอยากทำ frontend อีกแล้ว
 postSlug: i-am-done-with-frontend
+ogImage: "@assets/images/frontend-og.png"
 pubDatetime: 2023-12-11T16:02:30.490Z
 tags:
   - personal
@@ -9,6 +10,8 @@ tags:
 ---
 
 โพสนี้ไม่ได้แปลว่าผมไม่คิดว่าจะทำงาน frontend ต่อนะ แค่ผมรู้สึกว่ามันไม่ใช่ทางของผมอีกแล้ว
+
+## สารบัญ
 
 ## เรื่องมันเป็นแบบนี้
 
