@@ -49,38 +49,35 @@ Object Pool เป็น design pattern ที่ค่อนข้างพบ�
 
 ```python
 class ObjectPool:
-    def __init__(self, max_objects):
-        self.max_objects = max_objects
+    def __init__(self, initial_amount):
         self.pool = []
-        # Object pool instantiate objects
-        for _ in range(max_objects):
-            self.create_object()
+        for _ in range(initial_amount):
+            self.__create_object()
         self.in_use = set()
 
-    def create_object(self):
-        if len(self.pool) < self.max_objects:
-            obj = len(self.pool) + 1  # For demonstration, create simple numbered objects
-            self.pool.append(obj)
-            return obj
-        else:
-            return None
+    # Client should not create objects.
+    def __create_object(self):
+        # For demonstration, create simple numbered objects
+        obj = len(self.pool) + 1
+        self.pool.append(obj)
+        return obj
 
     def acquire_object(self):
-        if self.pool:
-            obj = self.pool.pop()
-            self.in_use.add(obj)
-            return obj
-        else:
-            return None
+        obj = self.pool.pop() if self.pool else self.__create_object()
+        self.in_use.add(obj)
+        return obj
 
     def release_object(self, obj):
         if obj in self.in_use:
             self.in_use.remove(obj)
-
             self.pool.append(obj)
 ```
 
 `in_use` มีไว้ track ว่า object ตัวไหนถูกใช้งานอยู่บ้าง การสร้าง Object Pool จะมีการสร้าง objects เตรียมไว้แล้วตามจำนวนที่ต้องการ
+
+การใช้ Object Pool ทำได้โดย เมื่อเราสร้าง Object Pool ที่มี object เตรียมไว้แล้ว เราสามารถ `acquire_object` เพื่อเอา object ที่อยู่ใน Pool ออกมา เมื่อใช้ object เสร็จแล้วก็จะใช้ `release_object` เพื่อส่ง object เข้าสู่ pool ถ้า `acquire_object` ตอนที่มันไม่ได้อยู่ใน pool ตัว object pool จะสร้าง object ให้ใหม่
+
+โดยปกติแล้ว Object ที่ใช้กับ Object Pool จะต้องมีการ reset ค่า เช่น กระสุนก็จะโดนปรับไม่ให้เคลื่อนที่ และ object ก็ควรจะเป็นอะไรที่เหมือนกันอีกด้วย
 
 ## Object Pool จริง ๆ
 
