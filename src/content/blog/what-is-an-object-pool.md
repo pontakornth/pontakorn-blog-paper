@@ -2,7 +2,6 @@
 title: Object Pool คืออะไร
 description: Object Pool และทำไมต้องมีสิ่งนี้
 postSlug: what-is-an-object-pool
-ogImage: "@assets/images/what-is-an-object-pool/example-screenshot.png"
 pubDatetime: 2023-12-15T14:30:00.000Z
 tags:
   - design pattern
