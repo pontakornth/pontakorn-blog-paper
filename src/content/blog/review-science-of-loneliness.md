@@ -10,8 +10,6 @@ tags:
   - book
 ---
 
-TODO: CREATE OG IMAGE
-
 ## สารบัญ
 
 ## สถานการณ์ส่วนตัว
