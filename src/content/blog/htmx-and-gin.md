@@ -1,5 +1,5 @@
 ---
-title: สร้างเว็บแนว Hypermedia ด้วย HTMX กับ Gin
+title: สร้างเว็บแนว Hypermedia ด้วย HTMX และ Gin
 description: ใช้ HTML เหมือนเดิม แต่เปลี่ยนบางส่วน
 postSlug: htmx-and-gin
 ogImage: "@assets/images/hypermedia-og.png"
