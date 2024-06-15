@@ -1,6 +1,6 @@
 ---
 title: เขียนเว็บแนว Hypermedia ด้วย HTMX กับ Gin
-description: เขียนเว็บแนวเก่าและใหม่
+description: ใช้ HTML เหมือนเดิม แต่เปลี่ยนบางส่วน
 postSlug: htmx-and-gin
 ogImage: "@assets/images/hypermedia-og.png"
 pubDatetime: 2024-06-15T12:00:00.000Z
