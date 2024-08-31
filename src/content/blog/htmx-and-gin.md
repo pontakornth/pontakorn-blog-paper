@@ -10,12 +10,14 @@ tags:
   - htmx
 ---
 
+## สารบัญ
+
+## HTMX กับ Project
+
 ช่วงก่อนเปลี่ยน project ผมได้ลองศึกษา framework อันหนึ่งชื่อ HTMX แล้วกะจะมาใช้ใน project
 แต่ว่ามีเหตุผลบางอย่างที่เปลี่ยน project ไป และก็ได้กลับมาลองเขียน HTMX อีกทีตอนทำวิชา seminar
 
 [กดเพื่อดู talk ที่ทำส่งเป็นการบ้าน](https://www.youtube.com/watch?v=obLmF7bFCKI)
-
-## สารบัญ
 
 ## รู้จักกับ HTMX
 
