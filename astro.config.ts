@@ -38,7 +38,7 @@ export default defineConfig({
       ],
     ],
     shikiConfig: {
-      theme: "vitesse-dark",
+      theme: "everforest-dark",
       wrap: true,
     },
   },
