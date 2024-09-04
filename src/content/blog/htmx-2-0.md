@@ -2,7 +2,6 @@
 title: HTMX ออกเวอร์ชั่น 2.0 แล้ว
 description: ในที่สุด HTMX ก็ออกเวอร์ชั่น 2.0 แบบเสถียร
 postSlug: htmx-2-0
-# ogImage: "@assets/images/hypermedia-og.png"
 pubDatetime: 2024-06-18T07:00:00.000Z
 tags:
   - web development
