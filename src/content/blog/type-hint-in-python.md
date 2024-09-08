@@ -5,6 +5,7 @@ postSlug: type-hint-in-python
 pubDatetime: 2024-08-31T10:00:00.000Z
 tags:
   - python
+  - programming
 ---
 
 ## สารบัญ
