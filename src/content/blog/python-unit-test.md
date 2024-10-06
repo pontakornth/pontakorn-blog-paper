@@ -2,7 +2,7 @@
 title: เขียน Unit Test ใน Python ด้วย unittest และ pytest
 description: เขียน Unit Test ทั้งสองแบบใน Python กันเถอะ
 postSlug: python-unit-test
-pubDatetime: 2024-09-08T14:00:00.000Z
+pubDatetime: 2024-08-09T14:00:00.000Z
 ogImage: "@assets/images/unittest-in-python.png"
 tags:
   - python
