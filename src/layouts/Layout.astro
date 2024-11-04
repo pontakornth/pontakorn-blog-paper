@@ -1,7 +1,7 @@
 ---
 import { SITE } from "@config";
 import "@styles/base.css";
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -27,7 +27,6 @@ const socialImageURL = new URL(
 ).href;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -83,21 +82,23 @@ const socialImageURL = new URL(
       )
     }
 
-    <ViewTransitions />
+   <!-- Enable it again after I can figure out how to run the freaking Kofi widget -->
+    <!-- <ViewTransitions /> -->
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
     <slot />
-    <script is:inline src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
-    ></script>
+    <script
+      is:inline
+      src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
     <script is:inline>
-      kofiWidgetOverlay.draw("pontakorn", {
-        type: "floating-chat",
-        "floating-chat.donateButton.text": "Support me",
-        "floating-chat.donateButton.background-color": "#323842",
-        "floating-chat.donateButton.text-color": "#fff",
-      });
+        kofiWidgetOverlay.draw("pontakorn", {
+          type: "floating-chat",
+          "floating-chat.donateButton.text": "Support me",
+          "floating-chat.donateButton.background-color": "#323842",
+          "floating-chat.donateButton.text-color": "#fff",
+        });
     </script>
   </body>
 </html>
