@@ -3,7 +3,6 @@ title: รีวิว วิทยาศาสตร์แห่งความ
 description: "ความเหงาทำอะไรกับเราได้บ้าง"
 postSlug: review-science-of-loneliness
 ogImage: "@assets/images/loneliness.png"
-featured: true
 pubDatetime: 2024-01-28T05:12:34.828Z
 tags:
   - personal

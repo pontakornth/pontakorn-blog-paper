@@ -4,6 +4,7 @@ description: Elysia เป็น framework ที่ทำให้ DX กับ
 postSlug: introduction-to-elysia
 ogImage: "@assets/images/introduction-to-elysia.png"
 pubDatetime: 2024-10-27T16:00:00.000Z
+featured: true
 tags:
   - elysia
   - javascript

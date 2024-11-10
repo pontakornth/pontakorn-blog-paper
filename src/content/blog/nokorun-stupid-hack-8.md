@@ -3,6 +3,7 @@ title: Stupid Hackathon 8 และเบื้องหลัง Nokorun
 description: เกม Nokorun ที่สร้างใน SHT8
 postSlug: nokorun-stupid-hack-8
 ogImage: "@assets/images/nokorun/noko-thumbnail.png"
+featured: true
 pubDatetime: 2024-07-18T10:00:00.000Z
 tags:
   - game development
